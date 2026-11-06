@@ -1,0 +1,15 @@
+/* ===== Home sections ===== */
+.home {
+  padding-top: 0;
+}
+
+.home-body {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.home-section {
+  display: grid;
+  gap: var(--space-4);
+}

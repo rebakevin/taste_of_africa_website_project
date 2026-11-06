@@ -1,0 +1,50 @@
+/* ===== Hero ===== */
+.hero {
+  padding: var(--space-6) 0;
+  background-image: linear-gradient(var(--color-overlay), var(--color-overlay)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Lunch_on_the_street.jpg/1280px-Lunch_on_the_street.jpg');
+  background-position: center;
+  background-size: cover;
+  color: var(--color-header-text);
+}
+
+.hero a {
+  --color-link: var(--color-accent);
+}
+
+.hero-inner,
+.hero-text {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.hero-lead {
+  font-size: 1.25rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.hero-credit {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 48rem) {
+  .hero {
+    padding: calc(var(--space-6) * 1.5) 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero-inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--space-5) var(--space-6);
+  }
+
+  .hero-credit {
+    grid-column: 1 / -1;
+  }
+}
