@@ -560,21 +560,21 @@ mark {
   margin: 0 auto;
 }
 
-/* ===== Dish card ===== */
-.dish-grid {
+/* ===== Media card ===== */
+.card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: var(--space-4);
 }
 
-.dish-card-image {
+.media-card-image {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   background: var(--color-border);
 }
 
-.dish-card-body {
+.media-card-body {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -583,12 +583,12 @@ mark {
   padding: var(--space-3);
 }
 
-.dish-card-country {
+.media-card-country {
   font-weight: 700;
   color: var(--color-text-muted);
 }
 
-.dish-card-body .button {
+.media-card-body .button {
   margin-top: auto;
 }
 
