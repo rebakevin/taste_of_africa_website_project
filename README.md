@@ -1,6 +1,6 @@
 # Tastes of Africa
 
-https://rebakevin.github.io/taste_of_africa_website_project/
+[Deployed website here](https://rebakevin.github.io/taste_of_africa_website_project/)
 
 ## Why components
 
