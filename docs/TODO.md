@@ -163,10 +163,10 @@ refresh, console clean.
 
 ## Phase 5: Region template and pages
 
-- [ ] Build `west-africa.html` fully: intro, staples, techniques (≥3 `<mark>` on spices and methods), dish cards linking
+- [x] Build `west-africa.html` fully: intro, staples, techniques (≥3 `<mark>` on spices and methods), dish cards linking
   to recipes, YouTube embed, "also try" line.
-- [ ] Copy to `north-africa.html` and `east-southern-africa.html`.
-- [ ] East & Southern: three recipe links, plus Kenya (Nyama Choma) and Mozambique (Piri-Piri Chicken) as plain text
+- [x] Copy to `north-africa.html` and `east-southern-africa.html`.
+- [x] East & Southern: three recipe links, plus Kenya (Nyama Choma) and Mozambique (Piri-Piri Chicken) as plain text
   with no links.
 
 **Gate**: RG1 to RG5 pass, all dish links resolve.
