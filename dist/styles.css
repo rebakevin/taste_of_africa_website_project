@@ -404,6 +404,66 @@ mark {
   margin-top: auto;
 }
 
+/* ===== Recipe card ===== */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-4);
+}
+
+.recipe-card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-2);
+  background: var(--color-border);
+}
+
+.recipe-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.recipe-card-country {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-text);
+}
+
+.recipe-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+.favorite-button {
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-text);
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  background: transparent;
+  color: var(--color-text);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.favorite-button:hover,
+.favorite-button.favorited {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.recipe-card-title {
+  font-size: 1.75rem;
+}
+
 /* ===== Recipe page ===== */
 .recipe,
 .recipe-body,
@@ -631,6 +691,37 @@ mark {
   font-size: 1.25rem;
   font-weight: 500;
   overflow-wrap: anywhere;
+}
+
+/* ===== Favorites ===== */
+.favorites-list {
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  margin-top: var(--space-5);
+}
+
+.favorites-empty {
+  margin-top: var(--space-5);
+}
+
+.favorites-empty-text {
+  margin-bottom: var(--space-3);
+}
+
+.remove-button {
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-text);
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  background: transparent;
+  color: var(--color-text);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.remove-button:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
 }
 
 /* ===== Home sections ===== */
@@ -896,62 +987,6 @@ mark {
 .filter-button.active {
   background: var(--color-text);
   color: var(--color-bg);
-}
-
-/* ===== Recipe card ===== */
-.recipe-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  gap: var(--space-4);
-}
-
-.recipe-card-image {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: var(--radius-2);
-  background: var(--color-border);
-}
-
-.recipe-card-body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-.recipe-card-country {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-accent-text);
-}
-
-.recipe-card-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: auto;
-  padding-top: var(--space-2);
-}
-
-.favorite-button {
-  min-height: var(--touch-target);
-  padding: var(--space-2) var(--space-3);
-  border: 1px solid var(--color-text);
-  border-radius: var(--radius-pill);
-  font-weight: 500;
-  background: transparent;
-  color: var(--color-text);
-  transition: background-color var(--transition-fast), color var(--transition-fast);
-}
-
-.favorite-button:hover,
-.favorite-button.favorited {
-  border-color: var(--color-accent);
-  background: var(--color-accent);
-  color: var(--color-on-accent);
 }
 
 /* ===== Regions listing ===== */
