@@ -186,13 +186,13 @@ refresh, console clean.
 
 ## Phase 7: Polish
 
-- [ ] Nav hover (color plus underline), card hover, input `:focus` glow, `mark` style. Hover and transition only, no
+- [x] Nav hover (color plus underline), card hover, input `:focus` glow, `mark` style. Hover and transition only, no
   `@keyframes`.
-- [ ] Check dark mode contrast on every page type.
-- [ ] Check 375px (mobile), 768px (tablet) and 1280px (desktop) on every page, plus 320px and 1024px edge widths. No
+- [x] Check dark mode contrast on every page type.
+- [x] Check 375px (mobile), 768px (tablet) and 1280px (desktop) on every page, plus 320px and 1024px edge widths. No
   horizontal scroll, no clipped text, no overlapping elements.
-- [ ] Rotate-test tablet portrait (768px) and landscape (1024px).
-- [ ] Add section comments in HTML, CSS and JS. Remove dead code and any `console.log`.
+- [x] Rotate-test tablet portrait (768px) and landscape (1024px).
+- [x] Add section comments in HTML, CSS and JS. Remove dead code and any `console.log`.
 
 ## Phase 8: Verification (`REQUIREMENTS.md` §13)
 
