@@ -53,3 +53,7 @@
   background: var(--color-accent);
   color: var(--color-on-accent);
 }
+
+.recipe-card-title {
+  font-size: 1.75rem;
+}

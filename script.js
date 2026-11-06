@@ -123,6 +123,38 @@ function initFavorites() {
   });
 }
 
+// ---- Favorites page ----
+function initFavoritesPage() {
+  const list = document.querySelector('.favorites-list');
+  if (!list) return;
+
+  const cards = list.querySelectorAll('[data-id]');
+  const empty = document.querySelector('.favorites-empty');
+  let favorites = readFavorites();
+
+  function showCards() {
+    let savedCount = 0;
+    cards.forEach((card) => {
+      const isSaved = favorites.includes(card.dataset.id);
+      card.classList.toggle(HIDDEN_CLASS, !isSaved);
+      if (isSaved) {
+        savedCount = savedCount + 1;
+      }
+    });
+    empty.classList.toggle(HIDDEN_CLASS, savedCount > 0);
+  }
+
+  cards.forEach((card) => {
+    card.querySelector('.remove-button').addEventListener('click', () => {
+      favorites = favorites.filter((savedId) => savedId !== card.dataset.id);
+      writeStorage(FAVORITES_KEY, JSON.stringify(favorites));
+      showCards();
+    });
+  });
+
+  showCards();
+}
+
 // ---- Ingredient scaling ----
 function scaleAmount(base, servings) {
   const scaled = (base * servings) / DEFAULT_SERVINGS;
@@ -170,5 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initRecipeFilter();
   initFavorites();
+  initFavoritesPage();
   initIngredientScaling();
 });

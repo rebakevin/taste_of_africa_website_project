@@ -1,0 +1,30 @@
+/* ===== Favorites ===== */
+.favorites-list {
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  margin-top: var(--space-5);
+}
+
+.favorites-empty {
+  margin-top: var(--space-5);
+}
+
+.favorites-empty-text {
+  margin-bottom: var(--space-3);
+}
+
+.remove-button {
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-text);
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  background: transparent;
+  color: var(--color-text);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.remove-button:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
