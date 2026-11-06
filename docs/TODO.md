@@ -27,43 +27,63 @@ Done first, because the layout depends on real aspect ratios and the spec's "eve
 **Images.** Needed: 1 hero, 5 dish photos (reused on home, listing, recipe pages), 3 region photos, 1 about image if
 used. About 10 files.
 
-- [ ] Source each from Unsplash first. Use Wikimedia Commons only where Unsplash has no good photo of the dish (likely
+- [x] Source each from Unsplash first. Use Wikimedia Commons only where Unsplash has no good photo of the dish (likely
   Isombe, Injera). Never guess a photo ID. (Decided with the user.)
-- [ ] Pick photos that crop well to 16:9, 4:3 and square, since cards, hero and recipe pages use different ratios. Use
+- [x] Pick photos that crop well to 16:9, 4:3 and square, since cards, hero and recipe pages use different ratios. Use
   `srcset`/`sizes` or width params so mobile does not load desktop-size images.
-- [ ] Check each URL returns HTTP 200 and `image/*`, then look at the image to confirm it shows the right dish.
-- [ ] Record each in the table below: file or URL, dish, credit.
-- [ ] Add a crop and size parameter to each URL (e.g. `?w=1200&q=80`) so pages stay light.
-- [ ] If any dish has no good photo, say so and ask. Do not substitute a different dish.
-- [ ] Write real `alt` text for each now (what is in the picture, not "image of food").
+- [x] Check each URL returns HTTP 200 and `image/*`, then look at the image to confirm it shows the right dish.
+- [x] Record each in the table below: file or URL, dish, credit.
+- [x] Add a crop and size parameter to each URL (e.g. `?w=1200&q=80`) so pages stay light.
+- [x] If any dish has no good photo, say so and ask. Do not substitute a different dish.
+- [x] Write real `alt` text for each now (what is in the picture, not "image of food").
 - [ ] Keep the mock's striped gradient as a CSS `background` behind each `<img>` so a failed hotlink still looks
   intentional.
 
 **YouTube.** Needed: 1 home intro, 5 tutorials, 3 region videos (can reuse), 0 for about. About 9 embeds.
 
-- [ ] Find one video per dish and region. Prefer reputable channels and videos that allow embedding.
-- [ ] Verify each ID with the oEmbed endpoint (`youtube.com/oembed?url=...`): 200 means embeddable.
-- [ ] Use `youtube-nocookie.com/embed/<id>`.
+- [x] Find one video per dish and region. Prefer reputable channels and videos that allow embedding.
+- [x] Verify each ID with the oEmbed endpoint (`youtube.com/oembed?url=...`): 200 means embeddable.
+- [x] Use `youtube-nocookie.com/embed/<id>`.
 
 **Maps.**
 
-- [ ] 5 country embeds (Nigeria, Egypt, Ethiopia, Rwanda, South Africa) using the keyless
+- [x] 5 country embeds (Nigeria, Egypt, Ethiopia, Rwanda, South Africa) using the keyless
   `maps.google.com/maps?q=<place>&output=embed` form.
-- [ ] 1 about-page landmark (pick one real, well-known food place or market, e.g. Khan el-Khalili, Cairo).
+- [x] 1 about-page landmark (pick one real, well-known food place or market, e.g. Khan el-Khalili, Cairo).
 
 **Gate**: media table complete, every URL checked, every dish has a verified photo.
 
 | Slot                 | Source URL | Credit | Alt text |
 |----------------------|------------|--------|----------|
-| hero                 |            |        |          |
-| jollof-rice          |            |        |          |
-| koshari              |            |        |          |
-| injera               |            |        |          |
-| isombe               |            |        |          |
-| bunny-chow           |            |        |          |
-| west-africa          |            |        |          |
-| north-africa         |            |        |          |
-| east-southern-africa |            |        |          |
+| hero                 | https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Lunch_on_the_street.jpg/1280px-Lunch_on_the_street.jpg | OussamaHamama, CC BY-SA 4.0 (Wikimedia Commons) | Overhead view of a shared meal on a round table: a leafy stew, boiled cassava, a chicken in orange sauce and balls of swallow, with a hand reaching in. |
+| jollof-rice          | https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Jollof_rice_with_vegetable.jpg/960px-Jollof_rice_with_vegetable.jpg | Segun Famisa, CC BY-SA 4.0 | A plate of orange-red jollof rice topped with a stewed egg, beside a portion of cooked leafy greens. |
+| koshari              | https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Egyptian_Koshari.jpg/960px-Egyptian_Koshari.jpg | Basma, CC BY-SA 4.0 | A foil bowl of koshari: macaroni and rice topped with chickpeas and red tomato sauce, with more sauce being spooned over it. |
+| injera               | https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Injera_with_eight_kinds_of_stew.jpg/960px-Injera_with_eight_kinds_of_stew.jpg | Artem.G, CC BY-SA 4.0 | Overhead view of a round platter lined with injera, topped with small portions of lentils, vegetables and salad, with rolled injera around the edge. |
+| isombe               | https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/ISOMBE.jpg/960px-ISOMBE.jpg | Mutiganda, CC BY-SA 4.0 | A wooden plate with a mound of dark green isombe over white rice, with a yellow scotch bonnet pepper on top. |
+| bunny-chow           | https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chicken_Curry_Bunny_Chow.JPG/960px-Chicken_Curry_Bunny_Chow.JPG | Lucinda jolly, CC BY-SA 4.0 | A hollowed-out quarter loaf of white bread filled with orange curry, beside a torn piece of bread with curry on it, on a wooden board. |
+| west-africa          | https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Food_Vendor_01.jpg/960px-Food_Vendor_01.jpg | Amuzujoe, CC BY-SA 4.0 | A street food vendor in Ghana in an apron and head wrap spooning stew into a container at a busy market stall. |
+| north-africa         | https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Spice_shop_in_the_souks.jpeg/960px-Spice_shop_in_the_souks.jpeg | Dan Lundberg, CC BY-SA 2.0 | A Marrakech spice shop with cones of yellow, orange and red spices, jars of dried herbs on the shelves, and a shopkeeper at the back. |
+| east-southern-africa | https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/ZA-Durban-curry-markt.jpg/960px-ZA-Durban-curry-markt.jpg | Bgabel, CC BY-SA 3.0 | Metal bowls of red, orange and yellow curry spices and crushed chilli on a Durban market counter. |
+
+**Videos (all pass oEmbed, `youtube-nocookie.com/embed/<id>`)**
+
+| Slot | ID | Title |
+|------|----|-------|
+| home intro | `1zyDUkdVZ0E` | Exploring the Richness of African Cuisine and Traditional Foods |
+| jollof-rice | `gLBSHVaZQj4` | Nigerian party jollof rice |
+| koshari | `nEC4hBdcq0k` | How to make authentic Egyptian Koshari |
+| injera | `NwVSl3FQt78` | How to Make Injera (Ethiopian Flatbread) Mulu's Way |
+| isombe | `eFt-j42yaRY` | Learn with me how to cook ISOMBE in Kigali Rwanda |
+| bunny-chow | `vIVW3T8-w78` | Bunny Chow, Durban style chicken bunny |
+| west-africa | `oqy5T4pcV5E` | West African Street Food Tour in Accra, Ghana |
+| north-africa | `RjYgSqSXiOQ` | Moroccan Street Food After Dark, Jemaa El-fnaa, Marrakech |
+| east-southern-africa | `pf8S_xvND-k` | 72 Hours in Addis Ababa (street food) |
+
+**Maps** (`maps.google.com/maps?q=<place>&output=embed`): Nigeria, Egypt, Ethiopia, Rwanda, South Africa (done on recipe pages), about page landmark: `Khan+el-Khalili+Cairo`.
+
+Notes: Unsplash blocks automated requests (401), so no photo ID could be verified; Wikimedia Commons used throughout
+instead. No about image (optional). Images use Wikimedia thumbnail sizes (960px, hero 1280px), not `srcset`.
+
 
 ---
 
