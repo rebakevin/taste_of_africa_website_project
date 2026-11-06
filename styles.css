@@ -2,6 +2,7 @@
 :root {
   --color-primary: #8B2E1F;
   --color-accent: #E9A820;
+  --color-accent-light: #F2BE45;
   --color-brown: #4A2C1A;
   --color-bg: #FFF6E5;
   --color-surface: #FFFFFF;
@@ -35,6 +36,8 @@
   --radius-3: 1.25rem;
   --radius-pill: 999px;
   --shadow-card: 0 0.25rem 1rem var(--color-shadow);
+  --shadow-card-hover: 0 0.5rem 1.5rem var(--color-shadow);
+  --shadow-focus: 0 0 0 0.25rem rgba(233, 168, 32, 0.45);
 
   --touch-target: 2.75rem;
   --container-tablet: 48rem;
@@ -226,7 +229,7 @@ a {
 
 .nav-link:hover,
 .nav-link[aria-current="page"] {
-  color: var(--color-accent);
+  color: var(--color-accent-light);
   text-decoration: underline;
 }
 
@@ -295,6 +298,12 @@ mark {
   border-radius: var(--radius-3);
   background: var(--color-surface);
   box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.card-grid .card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-0.25rem);
 }
 
 .embed {
@@ -723,6 +732,13 @@ mark {
   border-radius: var(--radius-2);
   background: var(--color-bg);
   color: var(--color-text);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-input:focus {
+  border-color: var(--color-accent);
+  outline: none;
+  box-shadow: var(--shadow-focus);
 }
 
 .form-error {
