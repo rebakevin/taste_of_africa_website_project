@@ -108,15 +108,15 @@ refresh, console clean.
 
 ## Phase 2: Recipe template (`jollof-rice.html`, canonical)
 
-- [ ] `<h1>`, hero `<figure>`/`<figcaption>`, story paragraph with `<mark>` on key ingredients (convert the mock's
+- [x] `<h1>`, hero `<figure>`/`<figcaption>`, story paragraph with `<mark>` on key ingredients (convert the mock's
   `*word*` markers).
-- [ ] Ingredients `<ul>`, every amount `<span class="amount" data-base="...">` with unit text beside it.
-- [ ] Servings control: `−`, count, `+`, with `aria-label`s and `aria-live` on the count.
-- [ ] Steps in `<details>` + `<summary>` with an `<ol>`.
-- [ ] YouTube `<iframe>` with `title`, nutrition `<table>` (`<caption>`, `<th scope>`), map `<iframe>`.
-- [ ] Links back to Recipes and to the region page.
-- [ ] CSS section for each component above, mobile-first (see Responsive plan).
-- [ ] `initIngredientScaling`: pure `scaleAmount(base, servings)` plus a DOM shell.
+- [x] Ingredients `<ul>`, every amount `<span class="amount" data-base="...">` with unit text beside it.
+- [x] Servings control: `−`, count, `+`, with `aria-label`s and `aria-live` on the count.
+- [x] Steps in `<details>` + `<summary>` with an `<ol>`.
+- [x] YouTube `<iframe>` with `title`, nutrition `<table>` (`<caption>`, `<th scope>`), map `<iframe>`.
+- [x] Links back to Recipes and to the region page.
+- [x] CSS section for each component above, mobile-first (see Responsive plan).
+- [x] `initIngredientScaling`: pure `scaleAmount(base, servings)` plus a DOM shell.
 
 **Gate**: Jollof page complete at 375px, 768px and 1280px, scaling works from 1 to 12, no console errors.
 
