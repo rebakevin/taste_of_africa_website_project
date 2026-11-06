@@ -12,7 +12,6 @@ const MAX_SERVINGS = 12;
 const MIN_MESSAGE_LENGTH = 20;
 
 // ---- Storage helpers ----
-// Private mode or blocked storage must not break the page, so both fall back quietly.
 function readStorage(key) {
   try {
     return localStorage.getItem(key);
@@ -24,14 +23,13 @@ function readStorage(key) {
 function writeStorage(key, value) {
   try {
     localStorage.setItem(key, value);
-    return true;
   } catch (error) {
-    return false;
+    console.error('Could not save', key);
   }
 }
 
 // ---- Theme ----
-function applyTheme(toggle, isDark) {
+function showTheme(toggle, isDark) {
   document.body.classList.toggle(DARK_CLASS, isDark);
   toggle.setAttribute('aria-pressed', String(isDark));
 }
@@ -40,11 +38,11 @@ function initTheme() {
   const toggle = document.querySelector('.theme-toggle');
   if (!toggle) return;
 
-  applyTheme(toggle, readStorage(THEME_KEY) === THEME_DARK);
+  showTheme(toggle, readStorage(THEME_KEY) === THEME_DARK);
 
   toggle.addEventListener('click', () => {
     const isDark = !document.body.classList.contains(DARK_CLASS);
-    applyTheme(toggle, isDark);
+    showTheme(toggle, isDark);
     writeStorage(THEME_KEY, isDark ? THEME_DARK : THEME_LIGHT);
   });
 }
@@ -62,9 +60,45 @@ function initFavorites() {
 }
 
 // ---- Ingredient scaling ----
+function scaleAmount(base, servings) {
+  const scaled = (base * servings) / DEFAULT_SERVINGS;
+  return Number(scaled.toFixed(2));
+}
+
 function initIngredientScaling() {
   const control = document.querySelector('.servings-control');
   if (!control) return;
+
+  const count = control.querySelector('.servings-count');
+  const minusButton = control.querySelector('[data-servings-step="-1"]');
+  const plusButton = control.querySelector('[data-servings-step="1"]');
+  const amounts = document.querySelectorAll('.amount');
+  let servings = DEFAULT_SERVINGS;
+
+  function showServings() {
+    count.textContent = servings;
+    minusButton.disabled = servings === MIN_SERVINGS;
+    plusButton.disabled = servings === MAX_SERVINGS;
+    amounts.forEach((amount) => {
+      amount.textContent = scaleAmount(Number(amount.dataset.base), servings);
+    });
+  }
+
+  minusButton.addEventListener('click', () => {
+    if (servings > MIN_SERVINGS) {
+      servings = servings - 1;
+      showServings();
+    }
+  });
+
+  plusButton.addEventListener('click', () => {
+    if (servings < MAX_SERVINGS) {
+      servings = servings + 1;
+      showServings();
+    }
+  });
+
+  showServings();
 }
 
 // ---- Contact form ----
