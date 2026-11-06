@@ -167,9 +167,37 @@ function initIngredientScaling() {
 }
 
 // ---- Contact form ----
+function isMessageLongEnough(message) {
+  return message.trim().length > MIN_MESSAGE_LENGTH;
+}
+
 function initContactForm() {
   const form = document.querySelector('.contact-form');
   if (!form) return;
+
+  const nameInput = form.querySelector('[name="name"]');
+  const messageInput = form.querySelector('[name="message"]');
+  const error = form.querySelector('.form-error');
+  const success = document.querySelector('.contact-success');
+  const successText = success.querySelector('.contact-success-text');
+
+  form.addEventListener('submit', (event) => {
+    // Nothing is sent anywhere, so stay on the page and show the result here.
+    event.preventDefault();
+
+    if (!isMessageLongEnough(messageInput.value)) {
+      error.textContent = `Message must be more than ${MIN_MESSAGE_LENGTH} characters.`;
+      messageInput.setAttribute('aria-invalid', 'true');
+      messageInput.focus();
+      return;
+    }
+
+    error.textContent = '';
+    messageInput.removeAttribute('aria-invalid');
+    successText.textContent = `Thank you, ${nameInput.value.trim()}! We've received your message.`;
+    form.classList.add(HIDDEN_CLASS);
+    success.classList.remove(HIDDEN_CLASS);
+  });
 }
 
 // ---- Entry point ----
