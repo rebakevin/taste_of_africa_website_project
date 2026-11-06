@@ -1,0 +1,10 @@
+/* ===== Contact success ===== */
+.contact-success {
+  align-items: flex-start;
+}
+
+.contact-success-text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  line-height: 1.3;
+}

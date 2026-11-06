@@ -1,0 +1,13 @@
+/* ===== About page ===== */
+.about {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.about-section {
+  display: grid;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: var(--container-tablet);
+  margin: 0 auto;
+}

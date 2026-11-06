@@ -1,0 +1,14 @@
+/* ===== Contact form ===== */
+.contact {
+  display: grid;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.contact-form,
+.contact-success {
+  gap: var(--space-4);
+  padding: var(--space-4);
+}

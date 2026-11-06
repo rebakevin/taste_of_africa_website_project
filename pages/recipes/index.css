@@ -1,0 +1,5 @@
+/* ===== Recipes listing ===== */
+.page-intro {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+}
