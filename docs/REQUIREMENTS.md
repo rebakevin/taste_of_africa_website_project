@@ -29,20 +29,20 @@ Source tags: **[A]** assignment text, **[R]** rubric only, **[S]** locked decisi
 
 | ID | File | Exists |
 |---|---|---|
-| P1 [A] | `index.html` | ☐ |
-| P2 [A] | `recipes.html` | ☐ |
-| P3 [A] | `jollof-rice.html` | ☐ |
-| P4 [A] | `koshari.html` | ☐ |
-| P5 [A] | `injera.html` | ☐ |
-| P6 [A] | `isombe.html` | ☐ |
-| P7 [A] | `bunny-chow.html` | ☐ |
-| P8 [A] | `west-africa.html` | ☐ |
-| P9 [A] | `north-africa.html` | ☐ |
-| P10 [A] | `east-southern-africa.html` | ☐ |
-| P11 [A] | `about.html` | ☐ |
-| P12 [A] | `contact.html` | ☐ |
-| P13 [A] | `styles.css` | ☐ |
-| P14 [A] | `script.js` | ☐ |
+| P1 [A] | `index.html` | ☑ |
+| P2 [A] | `recipes.html` | ☑ |
+| P3 [A] | `jollof-rice.html` | ☑ |
+| P4 [A] | `koshari.html` | ☑ |
+| P5 [A] | `injera.html` | ☑ |
+| P6 [A] | `isombe.html` | ☑ |
+| P7 [A] | `bunny-chow.html` | ☑ |
+| P8 [A] | `west-africa.html` | ☑ |
+| P9 [A] | `north-africa.html` | ☑ |
+| P10 [A] | `east-southern-africa.html` | ☑ |
+| P11 [A] | `about.html` | ☑ |
+| P12 [A] | `contact.html` | ☑ |
+| P13 [A] | `styles.css` | ☑ |
+| P14 [A] | `script.js` | ☑ |
 
 12 HTML files + `styles.css` + `script.js`.
 
