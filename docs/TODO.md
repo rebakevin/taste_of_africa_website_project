@@ -196,14 +196,14 @@ refresh, console clean.
 
 ## Phase 8: Verification (`REQUIREMENTS.md` §13)
 
-- [ ] Open all 12 pages: zero console errors, also with JS disabled for content.
-- [ ] Link check: every `href` resolves (script it with grep and `ls`).
-- [ ] Every YouTube, map and image URL still returns 200.
-- [ ] `grep`: no `onclick=`, no `style=`, no `@keyframes`, no `innerHTML`, every `<img>` has `alt`, every page has
+- [x] Open all 12 pages: zero console errors, also with JS disabled for content.
+- [x] Link check: every `href` resolves (script it with grep and `ls`).
+- [x] Every YouTube, map and image URL still returns 200.
+- [x] `grep`: no `onclick=`, no `style=`, no `@keyframes`, no `innerHTML`, every `<img>` has `alt`, every page has
   `styles.css`, `script.js`, viewport, fonts.
-- [ ] Walk every row in `REQUIREMENTS.md` §1 to §10 and tick it. Confirm §11 items are absent.
-- [ ] W3C HTML validation on each page.
-- [ ] Favorites and theme persistence after a hard refresh.
+- [x] Walk every row in `REQUIREMENTS.md` §1 to §10 and tick it. Confirm §11 items are absent.
+- [x] W3C HTML validation on each page.
+- [x] Favorites and theme persistence after a hard refresh.
 
 **Gate**: all boxes ticked. Report any that are not.
 
