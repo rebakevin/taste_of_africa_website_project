@@ -14,3 +14,5 @@ python3 -m http.server 8000
 ```
 
 Edit the source files, not `dist/`. Rebuild after every change.
+
+Deploy: push to `main`. In the GitHub repo, set Settings > Pages > Source to GitHub Actions.
