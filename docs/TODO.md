@@ -122,10 +122,10 @@ refresh, console clean.
 
 ## Phase 3: Remaining recipe pages
 
-- [ ] Copy the Jollof page to `koshari.html`, `injera.html`, `isombe.html`, `bunny-chow.html`.
-- [ ] Change only content, ids, `data-*`, region link, `aria-current`, media from Phase 0.
-- [ ] Fill each from the mock's data (story, ingredients, steps, nutrition).
-- [ ] Diff each page's structure against the Jollof page. Structure must be identical.
+- [x] Copy the Jollof page to `koshari.html`, `injera.html`, `isombe.html`, `bunny-chow.html`.
+- [x] Change only content, ids, `data-*`, region link, `aria-current`, media from Phase 0.
+- [x] Fill each from the mock's data (story, ingredients, steps, nutrition).
+- [x] Diff each page's structure against the Jollof page. Structure must be identical.
 
 **Gate**: all 5 recipe pages pass RP1 to RP11.
 
