@@ -1,5 +1,7 @@
 # Tastes of Africa
 
+https://rebakevin.github.io/taste_of_africa_website_project/
+
 Build the site into `dist/`:
 
 ```
