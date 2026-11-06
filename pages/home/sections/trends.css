@@ -1,10 +1,32 @@
-/* ===== Trend card ===== */
+/* ===== Trends ===== */
+.trends {
+  --color-focus: var(--color-accent);
+  background: var(--color-band-bg);
+  color: var(--color-band-text);
+}
+
+.trend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-5) var(--space-4);
+}
+
 .trend-card {
+  display: grid;
   gap: var(--space-2);
-  padding: var(--space-4);
+  align-content: start;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-band-line);
 }
 
 .trend-date {
+  font-size: 0.75rem;
   font-weight: 700;
-  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.trend-card p {
+  color: var(--color-band-muted);
 }

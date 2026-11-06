@@ -1,7 +1,7 @@
 /* ===== About page ===== */
 .about {
   display: grid;
-  gap: var(--space-5);
+  gap: var(--space-6);
 }
 
 .about-section {

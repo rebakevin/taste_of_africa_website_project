@@ -1,0 +1,78 @@
+/* ===== Word wall ===== */
+.wall {
+  --color-focus: var(--color-accent);
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-6) 0;
+  background: var(--color-band-bg);
+  color: var(--color-band-text);
+}
+
+.wall-rows {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.word-row {
+  font-size: clamp(3.5rem, 13vw, 9rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.word-row-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-accent);
+}
+
+.word-row-solid {
+  color: var(--color-word-solid);
+}
+
+.wall-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.wall-photo {
+  width: 100%;
+  max-width: 26rem;
+  padding: var(--space-3);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  transform: rotate(-2deg);
+}
+
+.wall-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.wall-caption {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: start;
+  padding-top: var(--space-3);
+}
+
+.wall-caption-text {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-style: italic;
+  line-height: 1.05;
+}
+
+.wall-caption .button {
+  --color-text: var(--color-ink);
+  --color-bg: var(--color-paper);
+}

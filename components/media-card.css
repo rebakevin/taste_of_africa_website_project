@@ -1,19 +1,15 @@
 /* ===== Media card ===== */
-.card-grid .card:hover {
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-0.25rem);
-}
-
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  gap: var(--space-4);
+  gap: var(--space-5) var(--space-4);
 }
 
 .media-card-image {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  border-radius: var(--radius-2);
   background: var(--color-border);
 }
 
@@ -23,12 +19,14 @@
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-2);
-  padding: var(--space-3);
 }
 
 .media-card-country {
+  font-size: 0.75rem;
   font-weight: 700;
-  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-text);
 }
 
 .media-card-body .button {

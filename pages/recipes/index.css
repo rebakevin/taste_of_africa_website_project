@@ -1,5 +1,7 @@
 /* ===== Recipes listing ===== */
 .page-intro {
-  margin-top: var(--space-2);
+  max-width: 32rem;
+  margin-top: var(--space-3);
+  font-size: 1.125rem;
   color: var(--color-text-muted);
 }

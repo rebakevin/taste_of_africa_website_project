@@ -8,8 +8,11 @@
 }
 
 .recipe-origin {
-  font-weight: 700;
-  color: var(--color-text-muted);
+  margin-top: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--color-accent-text);
 }
 
 .recipe-figure {
@@ -49,19 +52,19 @@
   width: var(--touch-target);
   height: var(--touch-target);
   padding: 0;
-  border: 2px solid var(--color-link);
+  border: 1px solid var(--color-text);
   border-radius: var(--radius-pill);
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1;
-  background: var(--color-surface);
-  color: var(--color-link);
+  background: transparent;
+  color: var(--color-text);
   transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .servings-button:hover:not(:disabled) {
-  background: var(--color-link);
-  color: var(--color-bg);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
 }
 
 .servings-button:disabled {
@@ -76,45 +79,48 @@
   list-style: none;
 }
 
+.ingredient-list {
+  gap: 0;
+  border-top: 1px solid var(--color-text);
+}
+
 .ingredient-item {
-  padding: var(--space-2) var(--space-3);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-2);
-  background: var(--color-surface);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .amount {
   font-weight: 700;
-  color: var(--color-link);
+  color: var(--color-accent-text);
 }
 
 .steps {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-2);
-  background: var(--color-surface);
+  border-top: 1px solid var(--color-text);
+  border-bottom: 1px solid var(--color-text);
 }
 
 .steps-summary {
   min-height: var(--touch-target);
-  padding: var(--space-3);
-  font-weight: 700;
+  padding: var(--space-3) 0;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
 .step-list {
   display: grid;
   gap: var(--space-3);
-  padding: 0 var(--space-3) var(--space-3) var(--space-5);
+  padding: 0 0 var(--space-4) var(--space-4);
 }
 
 .step-title {
   display: block;
+  font-weight: 700;
 }
 
 .nutrition-table {
   width: 100%;
   overflow: hidden;
-  border: 1px solid var(--color-border);
   border-radius: var(--radius-2);
   border-collapse: separate;
   border-spacing: 0;
@@ -124,7 +130,8 @@
 
 .nutrition-table caption {
   padding-bottom: var(--space-2);
-  font-weight: 700;
+  text-align: left;
+  color: var(--color-text-muted);
 }
 
 .nutrition-table th,
@@ -134,8 +141,8 @@
 }
 
 .nutrition-table thead {
-  background: var(--color-header-bg);
-  color: var(--color-header-text);
+  background: var(--color-band-bg);
+  color: var(--color-band-text);
 }
 
 @media (min-width: 64rem) {
