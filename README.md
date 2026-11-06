@@ -2,6 +2,14 @@
 
 https://rebakevin.github.io/taste_of_africa_website_project/
 
+## Why components
+
+- Single HTML files would grow too big to manage.
+- Each page is split into small sections, and shared styles live in `components/`.
+- `node build-site.js` joins them into the finished site in `dist/`.
+
+## Run
+
 Build the site into `dist/`:
 
 ```
@@ -17,4 +25,8 @@ python3 -m http.server 8000
 
 Edit the source files, not `dist/`. Rebuild after every change.
 
-Deploy: push to `main`. In the GitHub repo, set Settings > Pages > Source to GitHub Actions.
+## Deploy
+
+- Push to `main`.
+- A GitHub Actions workflow builds the site and publishes `dist/` to GitHub Pages.
+- Set Settings > Pages > Source to GitHub Actions.
