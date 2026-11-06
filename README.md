@@ -8,6 +8,10 @@ https://rebakevin.github.io/taste_of_africa_website_project/
 - Each page is split into small sections, and shared styles live in `components/`.
 - `node build-site.js` joins them into the finished site in `dist/`.
 
+## Prerequisite
+
+You need Node.js installed.
+
 ## Run
 
 Build the site into `dist/`:
