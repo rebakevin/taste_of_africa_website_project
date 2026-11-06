@@ -1,0 +1,8 @@
+/* ===== Regions listing ===== */
+.region-card-title {
+  font-size: 1.75rem;
+}
+
+.region-list {
+  margin-top: var(--space-5);
+}
