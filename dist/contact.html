@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Tastes of Africa</title>
-  <meta name="description" content="Email Tastes of Africa with a question, a recipe or a dish we have missed.">
+  <meta name="description" content="Send Tastes of Africa a question, a recipe or a dish we have missed.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -36,8 +36,92 @@
     <div class="container">
       <section class="contact">
         <h1>Contact</h1>
-        <p>Questions, recipes to share, or a dish we've missed? Write to us.</p>
-        <a href="mailto:r.kevin@alustudent.com" class="contact-email">r.kevin@alustudent.com</a>
+        <p>Questions, recipes to share, or a dish we've missed? Write to us, or email <a href="mailto:r.kevin@alustudent.com" class="contact-email">r.kevin@alustudent.com</a>.</p>
+
+        <!-- Contact form -->
+        <form class="contact-form">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="form-input" autocomplete="name" pattern=".*\S.*" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-input" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="country">Country</label>
+            <!-- A select cannot use a datalist, so the country field is an input with a datalist. -->
+            <input type="text" id="country" name="country" class="form-input" list="countries" autocomplete="country-name">
+            <datalist id="countries">
+          <option value="Algeria"></option>
+          <option value="Angola"></option>
+          <option value="Benin"></option>
+          <option value="Botswana"></option>
+          <option value="Burkina Faso"></option>
+          <option value="Burundi"></option>
+          <option value="Cabo Verde"></option>
+          <option value="Cameroon"></option>
+          <option value="Central African Republic"></option>
+          <option value="Chad"></option>
+          <option value="Comoros"></option>
+          <option value="Congo"></option>
+          <option value="C&ocirc;te d'Ivoire"></option>
+          <option value="Democratic Republic of the Congo"></option>
+          <option value="Djibouti"></option>
+          <option value="Egypt"></option>
+          <option value="Equatorial Guinea"></option>
+          <option value="Eritrea"></option>
+          <option value="Eswatini"></option>
+          <option value="Ethiopia"></option>
+          <option value="Gabon"></option>
+          <option value="Gambia"></option>
+          <option value="Ghana"></option>
+          <option value="Guinea"></option>
+          <option value="Guinea-Bissau"></option>
+          <option value="Kenya"></option>
+          <option value="Lesotho"></option>
+          <option value="Liberia"></option>
+          <option value="Libya"></option>
+          <option value="Madagascar"></option>
+          <option value="Malawi"></option>
+          <option value="Mali"></option>
+          <option value="Mauritania"></option>
+          <option value="Mauritius"></option>
+          <option value="Morocco"></option>
+          <option value="Mozambique"></option>
+          <option value="Namibia"></option>
+          <option value="Niger"></option>
+          <option value="Nigeria"></option>
+          <option value="Rwanda"></option>
+          <option value="S&atilde;o Tom&eacute; and Pr&iacute;ncipe"></option>
+          <option value="Senegal"></option>
+          <option value="Seychelles"></option>
+          <option value="Sierra Leone"></option>
+          <option value="Somalia"></option>
+          <option value="South Africa"></option>
+          <option value="South Sudan"></option>
+          <option value="Sudan"></option>
+          <option value="Tanzania"></option>
+          <option value="Togo"></option>
+          <option value="Tunisia"></option>
+          <option value="Uganda"></option>
+          <option value="Zambia"></option>
+          <option value="Zimbabwe"></option>
+            </datalist>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="form-input" rows="5" aria-describedby="message-error" required></textarea>
+            <p class="form-error" id="message-error" role="alert"></p>
+          </div>
+          <button type="submit" class="button button-solid">Send message</button>
+        </form>
+
+        <!-- Shown after a valid submit -->
+        <div class="contact-success hidden" role="status">
+          <p class="contact-success-text"></p>
+          <a href="index.html" class="button">Back to Home</a>
+        </div>
       </section>
     </div>
   </main>
