@@ -151,13 +151,13 @@ refresh, console clean.
 
 ## Phase 4: Recipes listing (`recipes.html`)
 
-- [ ] 5 recipe cards, each with `data-region`, `data-id`, image, name, country, description, recipe link, `❤️ Favorite`
+- [x] 5 recipe cards, each with `data-region`, `data-id`, image, name, country, description, recipe link, `❤️ Favorite`
   button with `aria-pressed`.
-- [ ] Filter bar: All, West Africa, North Africa, East & Southern Africa, with `data-filter` and `.active`.
-- [ ] `initRecipeFilter` (click listener, loop over cards, toggle `.hidden`).
-- [ ] `initFavorites` (toggle `.favorited`, persist JSON array in `favorites`, restore on load, validate what is read
+- [x] Filter bar: All, West Africa, North Africa, East & Southern Africa, with `data-filter` and `.active`.
+- [x] `initRecipeFilter` (click listener, loop over cards, toggle `.hidden`).
+- [x] `initFavorites` (toggle `.favorited`, persist JSON array in `favorites`, restore on load, validate what is read
   back).
-- [ ] Card grid CSS with `auto-fit`/`minmax`.
+- [x] Card grid CSS with `auto-fit`/`minmax`.
 
 **Gate**: every filter works, 2 favorites survive a hard refresh, un-favoriting removes the id.
 
