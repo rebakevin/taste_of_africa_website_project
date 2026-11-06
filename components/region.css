@@ -1,0 +1,26 @@
+/* ===== Region page ===== */
+.region {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.region-blurb {
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.region-figure {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.region-section {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.region-narrow {
+  width: 100%;
+  max-width: var(--container-tablet);
+  margin: 0 auto;
+}
