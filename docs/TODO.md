@@ -173,13 +173,13 @@ refresh, console clean.
 
 ## Phase 6: Home, About, Contact
 
-- [ ] `index.html` hero: CSS background image, overlay, welcome text, YouTube iframe.
-- [ ] Featured dishes: 4 `<figure>` cards with `<img>`, `<figcaption>`, recipe links.
-- [ ] Explore by region: 3 cards. Latest food trends: 3 `<article>` with heading, date and original text. ≥3 `<mark>`.
-- [ ] `about.html`: styled `<blockquote>` mission, 2 to 3 history paragraphs, landmark map.
-- [ ] `contact.html`: labelled name, email, country (`<input list>` + `<datalist>` with the explanatory comment),
+- [x] `index.html` hero: CSS background image, overlay, welcome text, YouTube iframe.
+- [x] Featured dishes: 4 `<figure>` cards with `<img>`, `<figcaption>`, recipe links.
+- [x] Explore by region: 3 cards. Latest food trends: 3 `<article>` with heading, date and original text. ≥3 `<mark>`.
+- [x] `about.html`: styled `<blockquote>` mission, 2 to 3 history paragraphs, landmark map.
+- [x] `contact.html`: labelled name, email, country (`<input list>` + `<datalist>` with the explanatory comment),
   message, submit. Inline error element wired with `aria-describedby`.
-- [ ] `initContactForm`: `preventDefault`, trimmed message must be **more than** 20 characters, error otherwise, on
+- [x] `initContactForm`: `preventDefault`, trimmed message must be **more than** 20 characters, error otherwise, on
   success hide form and show "Thank you, [Name]! We've received your message." via `textContent`.
 
 **Gate**: 20 characters fails, 21 passes, name appears safely, all 12 pages exist.
