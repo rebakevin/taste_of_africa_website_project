@@ -6,6 +6,10 @@ const FAVORITES_KEY = 'favorites';
 const THEME_DARK = 'dark';
 const THEME_LIGHT = 'light';
 const DARK_CLASS = 'dark';
+const ACTIVE_CLASS = 'active';
+const HIDDEN_CLASS = 'hidden';
+const FAVORITED_CLASS = 'favorited';
+const FILTER_ALL = 'all';
 const DEFAULT_SERVINGS = 4;
 const MIN_SERVINGS = 1;
 const MAX_SERVINGS = 12;
@@ -48,15 +52,76 @@ function initTheme() {
 }
 
 // ---- Recipe filter ----
+function isCardVisible(cardRegion, filter) {
+  return filter === FILTER_ALL || cardRegion === filter;
+}
+
 function initRecipeFilter() {
   const buttons = document.querySelectorAll('[data-filter]');
   if (buttons.length === 0) return;
+
+  const cards = document.querySelectorAll('[data-region]');
+
+  function showFilter(filter) {
+    buttons.forEach((button) => {
+      const isActive = button.dataset.filter === filter;
+      button.classList.toggle(ACTIVE_CLASS, isActive);
+      button.setAttribute('aria-pressed', String(isActive));
+    });
+    cards.forEach((card) => {
+      card.classList.toggle(HIDDEN_CLASS, !isCardVisible(card.dataset.region, filter));
+    });
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      showFilter(button.dataset.filter);
+    });
+  });
 }
 
 // ---- Favorites ----
+function readFavorites() {
+  const saved = readStorage(FAVORITES_KEY);
+  if (saved === null) return [];
+
+  try {
+    const ids = JSON.parse(saved);
+    if (Array.isArray(ids) && ids.every((id) => typeof id === 'string')) {
+      return ids;
+    }
+  } catch (error) {
+    return [];
+  }
+  return [];
+}
+
 function initFavorites() {
   const buttons = document.querySelectorAll('.favorite-button');
   if (buttons.length === 0) return;
+
+  let favorites = readFavorites();
+
+  function showButton(button, isFavorite) {
+    button.classList.toggle(FAVORITED_CLASS, isFavorite);
+    button.setAttribute('aria-pressed', String(isFavorite));
+  }
+
+  buttons.forEach((button) => {
+    const id = button.closest('[data-id]').dataset.id;
+    showButton(button, favorites.includes(id));
+
+    button.addEventListener('click', () => {
+      const isFavorite = !favorites.includes(id);
+      if (isFavorite) {
+        favorites.push(id);
+      } else {
+        favorites = favorites.filter((savedId) => savedId !== id);
+      }
+      showButton(button, isFavorite);
+      writeStorage(FAVORITES_KEY, JSON.stringify(favorites));
+    });
+  });
 }
 
 // ---- Ingredient scaling ----
