@@ -449,6 +449,90 @@ mark {
   color: var(--color-header-text);
 }
 
+/* ===== Recipes listing ===== */
+.page-intro {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-4) 0;
+}
+
+.filter-button {
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 2px solid var(--color-link);
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  background: var(--color-surface);
+  color: var(--color-link);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.filter-button:hover,
+.filter-button.active {
+  background: var(--color-link);
+  color: var(--color-bg);
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-4);
+}
+
+/* ===== Recipe card ===== */
+.recipe-card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0;
+  background: var(--color-border);
+}
+
+.recipe-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+}
+
+.recipe-card-country {
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.recipe-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+.favorite-button {
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 2px solid var(--color-link);
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  background: var(--color-surface);
+  color: var(--color-link);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.favorite-button:hover,
+.favorite-button.favorited {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
 /* ===== Utilities ===== */
 .hidden {
   display: none;
