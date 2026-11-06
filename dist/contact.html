@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=Instrument+Serif:ital@0;1&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -23,14 +23,7 @@
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="recipes.html" class="nav-link">Recipes</a></li>
-          <li class="nav-group">
-            <span class="nav-group-label">Regions</span>
-            <ul class="nav-sublist">
-              <li><a href="west-africa.html" class="nav-link">West Africa</a></li>
-              <li><a href="north-africa.html" class="nav-link">North Africa</a></li>
-              <li><a href="east-southern-africa.html" class="nav-link">East &amp; Southern Africa</a></li>
-            </ul>
-          </li>
+          <li><a href="regions.html" class="nav-link">Regions</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="contact.html" class="nav-link" aria-current="page">Contact</a></li>
         </ul>
@@ -45,7 +38,7 @@
         <p>Questions, recipes to share, or a dish we've missed? Write to us.</p>
 
         <!-- Contact form -->
-        <form class="card contact-form">
+        <form class="contact-form">
           <div class="form-field">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" class="form-input" autocomplete="name" pattern=".*\S.*" required>
@@ -120,11 +113,11 @@
             <textarea id="message" name="message" class="form-input" rows="5" aria-describedby="message-error" required></textarea>
             <p class="form-error" id="message-error" role="alert"></p>
           </div>
-          <button type="submit" class="button">Send message</button>
+          <button type="submit" class="button button-solid">Send message</button>
         </form>
 
         <!-- Shown after a valid submit -->
-        <div class="card contact-success hidden" role="status">
+        <div class="contact-success hidden" role="status">
           <p class="contact-success-text"></p>
           <a href="index.html" class="button">Back to Home</a>
         </div>
@@ -135,7 +128,7 @@
   <!-- Site footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Tastes of Africa. Taste the continent.</p>
+      <p class="footer-text">&copy; 2026 Tastes of Africa. Taste the continent.</p>
     </div>
   </footer>
 </body>

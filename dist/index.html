@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=Instrument+Serif:ital@0;1&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -23,14 +23,7 @@
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
           <li><a href="recipes.html" class="nav-link">Recipes</a></li>
-          <li class="nav-group">
-            <span class="nav-group-label">Regions</span>
-            <ul class="nav-sublist">
-              <li><a href="west-africa.html" class="nav-link">West Africa</a></li>
-              <li><a href="north-africa.html" class="nav-link">North Africa</a></li>
-              <li><a href="east-southern-africa.html" class="nav-link">East &amp; Southern Africa</a></li>
-            </ul>
-          </li>
+          <li><a href="regions.html" class="nav-link">Regions</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
@@ -41,23 +34,26 @@
   <main class="site-main home">
     <!-- Hero -->
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>Taste the <mark>continent.</mark></h1>
-          <p class="hero-lead">Welcome to Tastes of Africa, a celebration of 54 countries' worth of fire, smoke, spice and soul. Cook the recipes, meet the regions, and taste the stories behind every pot.</p>
-          <div class="hero-actions">
-            <a href="recipes.html" class="button button-light">Browse recipes</a>
-            <a href="west-africa.html" class="button button-light">Explore regions</a>
-          </div>
+      <div class="container">
+        <div class="hero-heading">
+          <h1 class="hero-title"><span class="hero-title-small">Tastes of</span> Africa</h1>
+          <a href="recipes.html" class="hero-tag">Browse recipes</a>
         </div>
-        <div class="embed">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/1zyDUkdVZ0E"
-            title="Video: an introduction to African cuisine and traditional foods"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="encrypted-media; picture-in-picture"
-            allowfullscreen></iframe>
+        <div class="hero-intro">
+          <p class="hero-lead">Welcome to Tastes of Africa, a celebration of 54 countries' worth of fire, smoke, <mark>spice</mark> and soul. Cook the recipes, meet the regions, and taste the stories behind every pot.</p>
+          <a href="regions.html" class="button">Explore regions</a>
+        </div>
+        <div class="hero-stage">
+          <p class="hero-stage-text">A short film on where African food comes from.</p>
+          <div class="embed">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/1zyDUkdVZ0E"
+              title="Video: an introduction to African cuisine and traditional foods"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="encrypted-media; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
         </div>
         <p class="hero-credit">
           Background photo by OussamaHamama,
@@ -69,10 +65,36 @@
       </div>
     </section>
 
-    <div class="container home-body">
-      <!-- Featured dishes -->
-      <section class="home-section">
-        <h2>Featured Dishes</h2>
+    <!-- Repeated dish names behind a photo -->
+    <section class="wall">
+      <div class="wall-rows" aria-hidden="true">
+        <p class="word-row word-row-outline">Jollof &#10033; Koshari &#10033; Injera &#10033; Isombe &#10033; Bunny Chow &#10033; Jollof &#10033; Koshari &#10033; Injera &#10033; Isombe &#10033; Bunny Chow</p>
+        <p class="word-row word-row-solid">Koshari &#10033; Injera &#10033; Isombe &#10033; Bunny Chow &#10033; Jollof &#10033; Koshari &#10033; Injera &#10033; Isombe &#10033; Bunny Chow &#10033; Jollof</p>
+        <p class="word-row word-row-outline">Injera &#10033; Isombe &#10033; Bunny Chow &#10033; Jollof &#10033; Koshari &#10033; Injera &#10033; Isombe &#10033; Bunny Chow &#10033; Jollof &#10033; Koshari</p>
+        <p class="word-row word-row-solid">Isombe &#10033; Bunny Chow &#10033; Jollof &#10033; Koshari &#10033; Injera &#10033; Isombe &#10033; Bunny Chow &#10033; Jollof &#10033; Koshari &#10033; Injera</p>
+        <p class="word-row word-row-outline">Bunny Chow &#10033; Jollof &#10033; Koshari &#10033; Injera &#10033; Isombe &#10033; Bunny Chow &#10033; Jollof &#10033; Koshari &#10033; Injera &#10033; Isombe</p>
+      </div>
+      <div class="container wall-inner">
+        <figure class="wall-photo">
+          <img
+            class="wall-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Jollof_rice_with_vegetable.jpg/960px-Jollof_rice_with_vegetable.jpg"
+            width="960"
+            height="720"
+            alt="A plate of orange-red jollof rice topped with a stewed egg, beside a portion of cooked leafy greens."
+            loading="lazy">
+          <figcaption class="wall-caption">
+            <span class="wall-caption-text">Five dishes. Start with jollof.</span>
+            <a href="jollof-rice.html" class="button">Cook jollof rice</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Featured dishes -->
+    <section class="home-section">
+      <div class="container home-inner">
+        <h2>Featured dishes</h2>
         <div class="card-grid">
           <figure class="card">
             <img class="media-card-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Jollof_rice_with_vegetable.jpg/960px-Jollof_rice_with_vegetable.jpg" width="960" height="720" alt="A plate of orange-red jollof rice topped with a stewed egg, beside a portion of cooked leafy greens." loading="lazy">
@@ -111,11 +133,13 @@
             </figcaption>
           </figure>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Explore by region -->
-      <section class="home-section">
-        <h2>Explore by Region</h2>
+    <!-- Explore by region -->
+    <section class="home-section">
+      <div class="container home-inner">
+        <h2>Explore by region</h2>
         <div class="card-grid">
           <article class="card">
             <img class="media-card-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Food_Vendor_01.jpg/960px-Food_Vendor_01.jpg" width="960" height="641" alt="A street food vendor in Ghana in an apron and head wrap spooning stew into a container at a busy market stall." loading="lazy">
@@ -142,36 +166,38 @@
             </div>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Latest food trends -->
-      <section class="home-section">
-        <h2>Latest Food Trends</h2>
-        <div class="card-grid">
-          <article class="card trend-card">
+    <!-- Latest food trends -->
+    <section class="home-section trends">
+      <div class="container home-inner">
+        <h2>Latest food trends</h2>
+        <div class="trend-grid">
+          <article class="trend-card">
             <time class="trend-date" datetime="2026-10-28">Oct 28, 2026</time>
             <h3>Teff goes global as chefs rediscover ancient grains</h3>
             <p>From Addis to Brooklyn, bakeries are swapping wheat for gluten-free <mark>teff</mark>, and injera is finally leaving the ethnic aisle.</p>
           </article>
-          <article class="card trend-card">
+          <article class="trend-card">
             <time class="trend-date" datetime="2026-10-14">Oct 14, 2026</time>
             <h3>Lagos pop-ups bring jollof to a new generation</h3>
             <p>Young cooks are remixing party <mark>jollof</mark> with smoked pepper and coal-fired rice, drawing queues around the block.</p>
           </article>
-          <article class="card trend-card">
+          <article class="trend-card">
             <time class="trend-date" datetime="2026-09-30">Sep 30, 2026</time>
             <h3>Piri-piri, the chilli that travelled the world</h3>
             <p>Traced from Mozambique's coast to Lisbon and London, the humble <mark>bird's-eye pepper</mark> keeps crossing borders.</p>
           </article>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 
   <!-- Site footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Tastes of Africa. Taste the continent.</p>
+      <p class="footer-text">&copy; 2026 Tastes of Africa. Taste the continent.</p>
     </div>
   </footer>
 </body>
